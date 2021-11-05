@@ -18,7 +18,7 @@ export const fetchSmurfs  = () => dispatch => {
     })
     .catch(err => {
         dispatch({type: FETCH_SMURF_ERROR, payload: err.response.status})
-        console.log(err.response)
+        // console.log(err.response)
     })
 }
 

@@ -25,7 +25,7 @@ In this project, you will build the reducer, actions and basic redux connects ne
 
 ## API documentation 
 
-* **[GET]** thttp://localhost:3333/smurfs`o `: returns the list of all smurfs objects.
+* **[GET]** to `http://localhost:3333/smurfs`: returns the list of all smurfs objects.
 * **[POST]** to `http://localhost:3333/smurfs`: creates a new smurf object. Pass smurf data through the `body` of the request.
 
 * **Smurf Object Structure** 
@@ -61,20 +61,20 @@ In this project, you will build the reducer, actions and basic redux connects ne
 
 ### Complete index.js
   Connect your application to reducer through redux with the thunk and logger middleware packages attached.
-  [X] wrote out syntax
+  [X] wrote out syn
 
 ### Complete actions/index.js
   Add in the action creators and action constants needed to add a smurf to state and fetch smurfs from the server. **If at all possible, add in action cases one at a time, instead of all at once. Test your state connects and reducer cases as nessisary.**
 
-  * [ ] Add a thunk action called fetchSmurfs that triggers a loading status display in our application, performs an axios call to retreive all smurfs from the api. Save the result of to our state and show an error if one is made.
-  * [ ] Add a standard action that allows us to add new smurf (including the name, nickname, position, summary).
-  * [ ] Add a standard action that allows us to set the value of the error message slice of state.
+  * [X] Add a thunk action called fetchSmurfs that triggers a loading status display in our application, performs an axios call to retreive all smurfs from the api. Save the result of to our state and show an error if one is made.
+  * [X] Add a standard action that allows us to add new smurf (including the name, nickname, position, summary).
+  * [X] Add a standard action that allows us to set the value of the error message slice of state.
   
 ### Complete App.js
   Connect component to the fetchSmurfs action.
   
-  * [ ] Connect the fetchSmurfs actions to the App component.
-  * [ ] Call the fetchSmurfs action when the component first loads.
+  * [X] Connect the fetchSmurfs actions to the App component.
+  * [X] Call the fetchSmurfs action when the component first loads.
 
 ### Complete components/SmurfList.js
   Connect this component to your smurfs and loading screen state slices.
