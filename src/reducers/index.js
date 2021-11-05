@@ -1,11 +1,8 @@
 import { act } from "react-dom/test-utils";
 
-//we are going to declare our constants here but don't forget to move them to a separate file and import them latere
-export const FETCH_SMURF_START = 'FETCH_SMURF_START';
-export const FETCH_SMURF_SUCCESS = 'FETCH_SMURF_SUCCESSS'
-export const FETCH_SMURF_ERROR = 'FETCH_SMURF_ERROR';
-export const ADD_SMURF = 'ADD_SMURF';
-export const  ADD_ERROR_VALUE = 'ADD_ERROR_VALUE';
+import { FETCH_SMURF_START, FETCH_SMURF_SUCCESS, FETCH_SMURF_ERROR, ADD_SMURF, ADD_ERROR_VALUE} from "../actions";
+
+
 
 export const initialState = {
     smurfs: [],
@@ -25,7 +22,8 @@ const reducer = (state = initialState, action)=>{
             return {
                 ...state,
                 errorMess: '',
-                loading: false
+                loading: false,
+                smurfs: action.payload
             }
         case FETCH_SMURF_ERROR:
             return {
