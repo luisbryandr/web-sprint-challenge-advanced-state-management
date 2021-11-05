@@ -1,8 +1,29 @@
+//we are going to declare our constants here but don't forget to move them to a separate file and import them latere
+export const FETCH = 'FETCH_SMURFS';
+export const SUCCESS_FETCH = 'SUCCESFUL_SMURF_FETCH';
+export const ERROR = 'ERROR';
+export const ADD_SMURF = 'ADD_SMURF';
+export const  ADD_ERROR_VALUE = 'ADD_ERROR_VALUE';
 
 export const initialState = {
+    smurfs: [],
+    loading: true,
+    errorMess: 'this is what is going wrong'
 }
 
-const reducer = ()=>{
+const reducer = (state, action)=>{
+    switch(action.type) {
+        case FETCH:
+            return 
+        case SUCCESS_FETCH:
+            return 
+        case ERROR:
+            return
+        case ADD_SMURF:
+            return
+        case ADD_ERROR_VALUE:
+            return
+    }
 }
 
 //**************DO NOT EDIT ANY CODE BEYOND THIS POINT**************//

@@ -6,8 +6,19 @@ import Header from './components/Header';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+import Axios from "axios";
 
 class App extends Component {
+
+  componentDidMount(){
+    Axios.get('http://localhost:3333/smurfs')
+    .then(res =>{
+      console.log(res)
+    }).catch(err=>{
+      console.log(err)
+    })
+  };
+
   render() {
     return (
       <div className="App">
