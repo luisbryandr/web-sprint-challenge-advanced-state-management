@@ -1,28 +1,55 @@
+import { act } from "react-dom/test-utils";
+
 //we are going to declare our constants here but don't forget to move them to a separate file and import them latere
-export const FETCH = 'FETCH_SMURFS';
-export const SUCCESS_FETCH = 'SUCCESFUL_SMURF_FETCH';
-export const ERROR = 'ERROR';
+export const FETCH_SMURF_START = 'FETCH_SMURF_START';
+export const FETCH_SMURF_SUCCESS = 'FETCH_SMURF_SUCCESSS'
+export const FETCH_SMURF_ERROR = 'FETCH_SMURF_ERROR';
 export const ADD_SMURF = 'ADD_SMURF';
 export const  ADD_ERROR_VALUE = 'ADD_ERROR_VALUE';
 
 export const initialState = {
     smurfs: [],
-    loading: true,
-    errorMess: 'this is what is going wrong'
+    loading: false,
+    errorMess: ''
 }
 
-const reducer = (state, action)=>{
+const reducer = (state = initialState, action)=>{
     switch(action.type) {
-        case FETCH:
-            return 
-        case SUCCESS_FETCH:
-            return 
-        case ERROR:
-            return
+        case FETCH_SMURF_START:
+            return {
+                ...state,
+                errorMess: '',
+                loading: true
+            }
+        case FETCH_SMURF_SUCCESS:
+            return {
+                ...state,
+                errorMess: '',
+                loading: false
+            }
+        case FETCH_SMURF_ERROR:
+            return {
+                ...state,
+                errorMess: action.payload,
+                loading: false
+            }
         case ADD_SMURF:
-            return
+            return{
+                ...state,
+                smurfs: [
+                    {
+                    id: action.payload.id,
+                    name: action.payload.name,
+                    nickname: action.payload.nickname.payload,
+                    position: action.payload.position,
+                    description: action.payload.description
+                }]
+            }
         case ADD_ERROR_VALUE:
-            return
+            return {
+                ...state,
+                errorMess: action.payload
+            }
     }
 }
 

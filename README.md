@@ -52,14 +52,16 @@ In this project, you will build the reducer, actions and basic redux connects ne
       - a string indicating a possible error message
 
   * [X] Add in the arguments needed to complete a standard reducer function.
-  * [ ] Add in a reducer case to accommodate the start of a smurf fetch.
-  * [ ] Add in a reducer case to accommodate the successful smurf api fetch.
-  * [ ] Add in a reducer cases to accommodate an error.
-  * [ ] Add in a reducer case to accommodate adding a smurf (including the name, nickname, position, description and an internally generated id) into your smurf list.
-  * [ ] Add in a reducer case that adds in a value to the error message.
+  * [X] Add in a reducer case to accommodate the start of a smurf fetch.
+  * [X] Add in a reducer case to accommodate the successful smurf api fetch.
+  * [X] Add in a reducer cases to accommodate an error.
+  * [X] Add in a reducer case to accommodate adding a smurf (including the name, nickname, position, description and an internally generated id) into your smurf list.//not sure if these last two are done right
+
+  * [X] Add in a reducer case that adds in a value to the error message.
 
 ### Complete index.js
   Connect your application to reducer through redux with the thunk and logger middleware packages attached.
+  [X] wrote out syntax
 
 ### Complete actions/index.js
   Add in the action creators and action constants needed to add a smurf to state and fetch smurfs from the server. **If at all possible, add in action cases one at a time, instead of all at once. Test your state connects and reducer cases as nessisary.**
